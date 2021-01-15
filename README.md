@@ -5,11 +5,11 @@
 
 #### Jan 15
 
+> git command 정리 (basic_command.md)
+
 README & IGNORE
 
 IGNORE : 필요 없는 파일들이 계속 생성될 건데, 그런 것들을 제거하기 위한 기능
-
-
 
 따라서 README.md & .gitignore 를 생성해야 함.
 
