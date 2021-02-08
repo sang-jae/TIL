@@ -139,13 +139,13 @@
 
   **태그 - table**
 
-  - `<tr>`
-  - `<td>`
-  - `<th>`
-  - `<thead>`
-  - `<tbody>`
-  - `<tfoot>`
-  - `<caption>`
+  - `<tr>` : table row. 표의 한 줄. 행.
+  - `<td>` : table data. 행 내의 데이터 셀 1개.
+  - `<th>` : table header. 
+  - `<thead>` : 제목 영역. 
+  - `<tbody>` : 
+  - `<tfoot>` : 
+  - `<caption>` : 
   - 셀 병합 속성 : colspan, rowspan
   - scope 속성
   - `<col>`

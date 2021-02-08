@@ -90,11 +90,21 @@ CSS 상속은 모두 되는 것은 아니다.
 
 크기 5개의 단위 (pixel % em rem viewport 기준 단위) 가 어떻게 다른지?
 
+pixel
+
+% : em이랑 같은 듯.
+
+em : 2em은 2배, 0.5em은 0.5배. (bootstrap에서는 m-1 : 0.25em)
+
+rem : root em. body의 사이즈에 영향을 받는다. body의 default font size는 16px
+
+viewport
+
+
+
 색상 단위 (RGB (red green blue) 조합 전부 섞이면 흰색.) #16진수로 / rgb() 함수로
 
-```
-      (HSL 색상 채도 명도 기준 - 별로 안중요한지 언급 안하심)
-```
+​				(HSL 색상 채도 명도 기준 - 별로 안중요한지 언급 안하심)
 
 RGB 색상의 경우. 색상명을 입력한 후, 색상 박스를 클릭하여 나오는 팝업으로 변경 가능
 
@@ -136,11 +146,11 @@ display: inline-block
 
 **CSS Position**
 
-static
+static : default 값
 
-absolute
+absolute : 원래 자리를 비우고 이동
 
-relative
+relative : 원래 자리에 있는 것 처럼 하고 이동. 다른 요소가 와서 채우지 않는다.
 
 셋의 차이를 파악할 것.
 
@@ -170,58 +180,3 @@ start / end / between / center / around /
 
 align-items ( align-self / align-content )
 
-Bootstrap
-
-CDN (Content Delivery (Distribution) Network)
-
-컨텐츠(CSS, JS, Image, Text 등) 을 효율적으로 전달하기 위해 여러 노드에 가진 네트워크에 데이터를 제공하는 시스템.
-
-개별 end-user 의 가까운 서버를 통해 빠르게 전달 가능 (지리적 이점) 외부 서버를 활용함으로써 본인 서버의 부하가 적어짐.
-
-CDN으로 가져옴
-
-**spacing (Utilities - spacing)**
-
-margin padding 설정 가능
-
-class naming : `{property}{sides}-{breakpoint}-{size}` 형식
-
-property : m (margin) p (padding)
-
-sides : t (top) b (bottom) s (left in LTR right in RTL) e (right in LTR left in RTL)
-
-​			x (x축 left right 둘다) y (y축 top bottom 둘다) 비워둠 (전부 다)  
-
-size : 0 ~ 5. `1: 0.25 rem`, `2: 0.5 rem`, `3: 1 rem`, `4: 1.5 rem`, `5: 3 rem`
-
-​			 root인 `<html>`의 root 글꼴 크기는 16px. 따라서 1의 경우 4px
-
- 			auto 도 들어갈 수 있음. mx-auto의 경우 수평 중앙정렬 된다.
-
-**color**
-
-부트스트랩의 색상 이름과 색상을 매칭할 수 있어야 한다.
-
-blue - primary / grey - secondary / green - success / red - danger / yellow - warning / 청록(?) - info / 밝은 회색(흰색에 가까운) - light / 검은색 - dark / 흰색 - white / 투명 - transparent
-
-**flexbox**
-
-CSS에서의 명령어와 Bootstrap에서의 차이.
-
-`display: flex;`   →   `class="d-flex"`
-
-
-
-**Responsive Web**
-
-Grid System
-
-flex-box로 제작됨
-
-container rows column 으로 컨텐츠를 배치하고 정렬
-
-반드시 기억할 것 2가지 : column 은 12개! / grid breakpoint 는 6개!
-
-homeworkshop 4개는 꼭 다시 보기 베껴서 냈다고 생각하지 마시고..?
-
-서술형이 아닌 문제는 주관식 단답형. 거기에 해당하는 답만 적으면 된다.
