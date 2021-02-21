@@ -54,13 +54,40 @@ for test_case in range(1, T + 1):
 
 어제까지 2중 for 문으로 구현하였으나, 시간이 초과되어서 방법을 못찾았었다.
 
-강의를 통해
+강의를 통해 아래 방법으로 구현하는 방법을 알게 되었다.
+
+
 
 ( : count += 1
 
 ) : 바로 앞에 ( 가 있다면 레이저로 처리 없다면 막대로 처리. count -= 1
 
+​	레이저로 처리 되었다면 count 만큼을 piece에 추가
 
+​	막대로 처리 되었다면 1 만큼을 piece에 추가
+
+```python
+import sys
+sys.stdin = open('input.txt')
+
+T = int(input())
+
+for test_case in range(1, T + 1):
+    str = input()
+    c = 0
+    p = 0
+    for i in range(len(str)):
+        if str[i] == '(':
+            c += 1
+        elif str[i] == ')':
+            c -= 1
+            if str[i-1] == '(':
+                p += c
+            else:
+                p += 1
+
+    print(f'#{test_case} {p}')
+```
 
 
 
@@ -70,7 +97,7 @@ for test_case in range(1, T + 1):
 
 ## 시험 전에 체크할 것
 
-1. 파이참으로 디버깅 하는 방법
+1. 파이참으로 디버깅 하는 방법 - 완료
 
 2. 시간 초과되는지 체크할 방법 (제출하기 전에)
 
