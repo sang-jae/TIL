@@ -33,7 +33,7 @@
 
 
 
-원형큐?
+### 원형큐
 
 
 
@@ -43,3 +43,29 @@
 
 > 8개의 숫자를 입력 받아, 사이클을 반복한 후 마지막 자리가 0이 되면 해당 배열을 암호로 출력
 
+```python
+def password(numbers):
+    while True:
+        for j in range(1, 6):
+
+            tmp = numbers.pop(0)
+            tmp2 = tmp - j
+            if tmp2 <= 0:
+                numbers.append(0)
+                break
+            else:
+                numbers.append(tmp2)
+        if tmp2 <= 0: break
+    return numbers
+
+for _ in range(10):
+    test_case = int(input())
+    numbers = list(map(int, input().split()))
+
+
+    print(f'#{test_case}', *password(numbers))
+```
+
+1사이클이 1~5를 순차적으로 빼면서 자리를 바꾸는 것이기 때문에 while 문 내에 for 문을 사용하고 같은 조건으로 두번 break 하는 방식을 사용했다.
+
+다른 사람의 코드를 보다보니 두번의 반복문을 사용하지 않고 count를 활용해서 5로 나눈 나머지만큼을 빼주는 방식을 사용해도 더 좋을 것 같았다.
